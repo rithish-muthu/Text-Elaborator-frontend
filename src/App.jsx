@@ -10,7 +10,7 @@ export default function App() {
 
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:3000/elaborate", {
+      const response = await fetch("https://text-elaborator-backend.onrender.com/elaborate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -29,8 +29,8 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
-      <div className="bg-white shadow-xl rounded-xl p-8 w-full max-w-md space-y-4">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 ">
+      <div className="bg-white shadow-xl rounded-xl p-8 w-full max-w-md space-y-4 my-5">
         <h1 className="text-2xl font-semibold text-center">Text Elaborator</h1>
         <input
           type="text"

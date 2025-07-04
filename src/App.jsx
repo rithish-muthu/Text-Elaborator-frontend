@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function App() {
   const [input, setInput] = useState("");
@@ -27,6 +27,12 @@ export default function App() {
       setLoading(false);
     }
   };
+
+useEffect(()=>{
+    if (loading){
+    setOutput('Please wait it will take some time to Elaborate...')
+  }
+},[loading])
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 ">
